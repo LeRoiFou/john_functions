@@ -48,9 +48,10 @@ import sys
 
 """--------------------------------------------------------------------------------------------------------------------  
 Les variables globales dans les fonctions : l'instruction globale permet de recourir à une variable d'une fonction   
-dans une autre fonction, ce qui équivaut dans une POO à une variable de classe  
+dans une autre fonction, ce qui équivaut dans une POO à une variable de classe :
+Attention le recours de variable globale est proscrite compte tenu que les modifications sont implicites et
+c'est une source de confusion pour les programmes...
 --------------------------------------------------------------------------------------------------------------------"""
-
 
 def calculer(chiffre1, chiffre2):
     """La variable res va être utilisée dans une autre fonction ci-après, on la déclare donc en global"""
@@ -162,7 +163,7 @@ def melanger(nom_personne, message, age):
 melanger(age=25, message='salut !', nom_personne='John')  # Nom des arguments instruits lors de l'appel de la fonction
 
 """--------------------------------------------------------------------------------------------------------------------  
-Nombre infini d'arguments précédés d'une '*' ou de deux '**' pour le dictionnaire  
+Nombre infini d'arguments précédés d'une '*' pour un tuple ou de deux '**' pour un dictionnaire  
 --------------------------------------------------------------------------------------------------------------------"""
 
 
